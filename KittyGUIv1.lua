@@ -402,384 +402,377 @@ local script = G2L["16"];
 	
 	script.Parent.Activated:Connect(function()
 		if not plr.PlayerGui:FindFirstChild("KittyGui.Stats") then
-		local G2L = {};
-	
-		-- StarterGui.KittyGui.Stats
-		G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-		G2L["1"]["Name"] = [[KittyGui.Stats]];
-		G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-	
+			local G2L = {};
+	
+			-- StarterGui.KittyGui.Stats
+			G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+			G2L["1"]["Name"] = [[KittyGui.Stats]];
+			G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 	
-		-- StarterGui.KittyGui.Stats.Stats
-		G2L["2"] = Instance.new("Frame", G2L["1"]);
-		G2L["2"]["BorderSizePixel"] = 0;
-		G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["2"]["Size"] = UDim2.new(0, 203, 0, 334);
-		G2L["2"]["Position"] = UDim2.new(0.53013, 22, 0.29033, 2);
-		G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["2"]["Name"] = [[Stats]];
 	
+			-- StarterGui.KittyGui.Stats.Stats
+			G2L["2"] = Instance.new("Frame", G2L["1"]);
+			G2L["2"]["BorderSizePixel"] = 0;
+			G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["2"]["Size"] = UDim2.new(0, 203, 0, 334);
+			G2L["2"]["Position"] = UDim2.new(0.53013, 22, 0.29033, 2);
+			G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["2"]["Name"] = [[Stats]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.UICorner
-		G2L["3"] = Instance.new("UICorner", G2L["2"]);
 	
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.UIGradient
-		G2L["4"] = Instance.new("UIGradient", G2L["2"]);
-		G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(112, 112, 112)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(112, 112, 112))};
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.ws
-		G2L["5"] = Instance.new("Folder", G2L["2"]);
-		G2L["5"]["Name"] = [[ws]];
-	
+			-- StarterGui.KittyGui.Stats.Stats.UICorner
+			G2L["3"] = Instance.new("UICorner", G2L["2"]);
 	
-		-- StarterGui.KittyGui.Stats.Stats.ws.StatsHandlerWalkSpeed
-		G2L["6"] = Instance.new("LocalScript", G2L["5"]);
-		G2L["6"]["Name"] = [[StatsHandlerWalkSpeed]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.UIGradient
+			G2L["4"] = Instance.new("UIGradient", G2L["2"]);
+			G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(112, 112, 112)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(112, 112, 112))};
 	
 	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeed
-		G2L["7"] = Instance.new("TextBox", G2L["2"]);
-		G2L["7"]["CursorPosition"] = -1;
-		G2L["7"]["Name"] = [[WalkSpeed]];
-		G2L["7"]["BorderSizePixel"] = 0;
-		G2L["7"]["TextSize"] = 14;
-		G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["7"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
-		G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["7"]["Size"] = UDim2.new(0, 80, 0, 25);
-		G2L["7"]["Position"] = UDim2.new(0.59113, 0, 0.30063, 0);
-		G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["7"]["Text"] = [[]];
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeed.UICorner
-		G2L["8"] = Instance.new("UICorner", G2L["7"]);
+			-- StarterGui.KittyGui.Stats.Stats.ws
+			G2L["5"] = Instance.new("Folder", G2L["2"]);
+			G2L["5"]["Name"] = [[ws]];
 	
 	
+			-- StarterGui.KittyGui.Stats.Stats.ws.StatsHandlerWalkSpeed
+			G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+			G2L["6"]["Name"] = [[StatsHandlerWalkSpeed]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeed:
-		G2L["9"] = Instance.new("TextLabel", G2L["2"]);
-		G2L["9"]["BorderSizePixel"] = 0;
-		G2L["9"]["TextSize"] = 17;
-		G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["9"]["BackgroundTransparency"] = 1;
-		G2L["9"]["Size"] = UDim2.new(0, 200, 0, 50);
-		G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["9"]["Text"] = [[WalkSpeed:]];
-		G2L["9"]["Name"] = [[WalkSpeed:]];
-		G2L["9"]["Position"] = UDim2.new(-0.21182, 0, 0.22798, 0);
 	
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeed
+			G2L["7"] = Instance.new("TextBox", G2L["2"]);
+			G2L["7"]["Name"] = [[WalkSpeed]];
+			G2L["7"]["BorderSizePixel"] = 0;
+			G2L["7"]["TextSize"] = 14;
+			G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["7"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
+			G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["7"]["Size"] = UDim2.new(0, 80, 0, 25);
+			G2L["7"]["Position"] = UDim2.new(0.59113, 0, 0.30063, 0);
+			G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["7"]["Text"] = [[]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.Stats
-		G2L["a"] = Instance.new("TextLabel", G2L["2"]);
-		G2L["a"]["BorderSizePixel"] = 0;
-		G2L["a"]["TextSize"] = 17;
-		G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["a"]["BackgroundTransparency"] = 1;
-		G2L["a"]["Size"] = UDim2.new(0, 200, 0, 50);
-		G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["a"]["Text"] = [[Stats:]];
-		G2L["a"]["Name"] = [[Stats]];
 	
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeed.UICorner
+			G2L["8"] = Instance.new("UICorner", G2L["7"]);
 	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower
-		G2L["b"] = Instance.new("TextBox", G2L["2"]);
-		G2L["b"]["CursorPosition"] = -1;
-		G2L["b"]["Name"] = [[CurrentJumpPower]];
-		G2L["b"]["BorderSizePixel"] = 0;
-		G2L["b"]["TextEditable"] = false;
-		G2L["b"]["TextSize"] = 14;
-		G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["b"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
-		G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["b"]["Size"] = UDim2.new(0, 80, 0, 25);
-		G2L["b"]["Position"] = UDim2.new(0.59113, 0, 0.43326, 0);
-		G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["b"]["Text"] = [[]];
 	
 	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.UICorner
-		G2L["c"] = Instance.new("UICorner", G2L["b"]);
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeed:
+			G2L["9"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["9"]["BorderSizePixel"] = 0;
+			G2L["9"]["TextSize"] = 17;
+			G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["9"]["BackgroundTransparency"] = 1;
+			G2L["9"]["Size"] = UDim2.new(0, 200, 0, 50);
+			G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["9"]["Text"] = [[WalkSpeed:]];
+			G2L["9"]["Name"] = [[WalkSpeed:]];
+			G2L["9"]["Position"] = UDim2.new(-0.21182, 0, 0.22798, 0);
 	
 	
+			-- StarterGui.KittyGui.Stats.Stats.Stats
+			G2L["a"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["a"]["BorderSizePixel"] = 0;
+			G2L["a"]["TextSize"] = 17;
+			G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["a"]["BackgroundTransparency"] = 1;
+			G2L["a"]["Size"] = UDim2.new(0, 200, 0, 50);
+			G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["a"]["Text"] = [[Stats:]];
+			G2L["a"]["Name"] = [[Stats]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.JumpHeight
-		G2L["d"] = Instance.new("LocalScript", G2L["b"]);
-		G2L["d"]["Name"] = [[JumpHeight]];
 	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower
+			G2L["b"] = Instance.new("TextBox", G2L["2"]);
+			G2L["b"]["Name"] = [[CurrentJumpPower]];
+			G2L["b"]["BorderSizePixel"] = 0;
+			G2L["b"]["TextEditable"] = false;
+			G2L["b"]["TextSize"] = 14;
+			G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["b"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
+			G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["b"]["Size"] = UDim2.new(0, 80, 0, 25);
+			G2L["b"]["Position"] = UDim2.new(0.59113, 0, 0.43326, 0);
+			G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["b"]["Text"] = [[]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent
-		G2L["e"] = Instance.new("TextBox", G2L["2"]);
-		G2L["e"]["CursorPosition"] = -1;
-		G2L["e"]["Name"] = [[WalkSpeedCurrent]];
-		G2L["e"]["BorderSizePixel"] = 0;
-		G2L["e"]["TextEditable"] = false;
-		G2L["e"]["TextSize"] = 14;
-		G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["e"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
-		G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["e"]["Size"] = UDim2.new(0, 80, 0, 25);
-		G2L["e"]["Position"] = UDim2.new(0.59113, 0, 0.22798, 0);
-		G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["e"]["Text"] = [[]];
 	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.UICorner
+			G2L["c"] = Instance.new("UICorner", G2L["b"]);
 	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.UICorner
-		G2L["f"] = Instance.new("UICorner", G2L["e"]);
 	
 	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.JumpHeight
+			G2L["d"] = Instance.new("LocalScript", G2L["b"]);
+			G2L["d"]["Name"] = [[JumpHeight]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.WalkSpeedCurrent
-		G2L["10"] = Instance.new("LocalScript", G2L["e"]);
-		G2L["10"]["Name"] = [[WalkSpeedCurrent]];
 	
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent
+			G2L["e"] = Instance.new("TextBox", G2L["2"]);
+			G2L["e"]["Name"] = [[WalkSpeedCurrent]];
+			G2L["e"]["BorderSizePixel"] = 0;
+			G2L["e"]["TextEditable"] = false;
+			G2L["e"]["TextSize"] = 14;
+			G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["e"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
+			G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["e"]["Size"] = UDim2.new(0, 80, 0, 25);
+			G2L["e"]["Position"] = UDim2.new(0.59113, 0, 0.22798, 0);
+			G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["e"]["Text"] = [[]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.JumpPower
-		G2L["11"] = Instance.new("TextBox", G2L["2"]);
-		G2L["11"]["CursorPosition"] = -1;
-		G2L["11"]["Name"] = [[JumpPower]];
-		G2L["11"]["BorderSizePixel"] = 0;
-		G2L["11"]["TextSize"] = 14;
-		G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["11"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
-		G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["11"]["Size"] = UDim2.new(0, 80, 0, 25);
-		G2L["11"]["Position"] = UDim2.new(0.59113, 0, 0.50591, 0);
-		G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["11"]["Text"] = [[]];
 	
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.UICorner
+			G2L["f"] = Instance.new("UICorner", G2L["e"]);
 	
-		-- StarterGui.KittyGui.Stats.Stats.JumpPower.UICorner
-		G2L["12"] = Instance.new("UICorner", G2L["11"]);
 	
 	
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.WalkSpeedCurrent
+			G2L["10"] = Instance.new("LocalScript", G2L["e"]);
+			G2L["10"]["Name"] = [[WalkSpeedCurrent]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.Drag
-		G2L["13"] = Instance.new("UIDragDetector", G2L["2"]);
-		G2L["13"]["Name"] = [[Drag]];
-		G2L["13"]["DragUDim2"] = UDim2.new(0, -16, 0, 0);
 	
+			-- StarterGui.KittyGui.Stats.Stats.JumpPower
+			G2L["11"] = Instance.new("TextBox", G2L["2"]);
+			G2L["11"]["Name"] = [[JumpPower]];
+			G2L["11"]["BorderSizePixel"] = 0;
+			G2L["11"]["TextSize"] = 14;
+			G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["11"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
+			G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["11"]["Size"] = UDim2.new(0, 80, 0, 25);
+			G2L["11"]["Position"] = UDim2.new(0.59113, 0, 0.50591, 0);
+			G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["11"]["Text"] = [[]];
 	
-		-- StarterGui.KittyGui.Stats.Stats.JumpPower:
-		G2L["14"] = Instance.new("TextLabel", G2L["2"]);
-		G2L["14"]["BorderSizePixel"] = 0;
-		G2L["14"]["TextSize"] = 17;
-		G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["14"]["BackgroundTransparency"] = 1;
-		G2L["14"]["Size"] = UDim2.new(0, 200, 0, 50);
-		G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["14"]["Text"] = [[JumpPower:]];
-		G2L["14"]["Name"] = [[JumpPower:]];
-		G2L["14"]["Position"] = UDim2.new(-0.21182, 0, 0.43157, 0);
 	
+			-- StarterGui.KittyGui.Stats.Stats.JumpPower.UICorner
+			G2L["12"] = Instance.new("UICorner", G2L["11"]);
 	
-		-- StarterGui.KittyGui.Stats.Stats.jp
-		G2L["15"] = Instance.new("Folder", G2L["2"]);
-		G2L["15"]["Name"] = [[jp]];
 	
 	
-		-- StarterGui.KittyGui.Stats.Stats.jp.StatsHandlerJumpPower
-		G2L["16"] = Instance.new("LocalScript", G2L["15"]);
-		G2L["16"]["Name"] = [[StatsHandlerJumpPower]];
+			-- StarterGui.KittyGui.Stats.Stats.Drag
+			G2L["13"] = Instance.new("UIDragDetector", G2L["2"]);
+			G2L["13"]["Name"] = [[Drag]];
+			G2L["13"]["DragUDim2"] = UDim2.new(0, -16, 0, 0);
 	
 	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentHealth
-		G2L["17"] = Instance.new("TextBox", G2L["2"]);
-		G2L["17"]["CursorPosition"] = -1;
-		G2L["17"]["Name"] = [[CurrentHealth]];
-		G2L["17"]["BorderSizePixel"] = 0;
-		G2L["17"]["TextEditable"] = false;
-		G2L["17"]["TextSize"] = 14;
-		G2L["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["17"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
-		G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["17"]["Size"] = UDim2.new(0, 80, 0, 25);
-		G2L["17"]["Position"] = UDim2.new(0.59113, 0, 0.63686, 0);
-		G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["17"]["Text"] = [[]];
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.UICorner
-		G2L["18"] = Instance.new("UICorner", G2L["17"]);
-	
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.Health
-		G2L["19"] = Instance.new("LocalScript", G2L["17"]);
-		G2L["19"]["Name"] = [[Health]];
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.Health:
-		G2L["1a"] = Instance.new("TextLabel", G2L["2"]);
-		G2L["1a"]["BorderSizePixel"] = 0;
-		G2L["1a"]["TextSize"] = 17;
-		G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["1a"]["BackgroundTransparency"] = 1;
-		G2L["1a"]["Size"] = UDim2.new(0, 200, 0, 50);
-		G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["1a"]["Text"] = [[Health:]];
-		G2L["1a"]["Name"] = [[Health:]];
-		G2L["1a"]["Position"] = UDim2.new(-0.21182, 0, 0.59924, 0);
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.Close
-		G2L["1b"] = Instance.new("TextButton", G2L["2"]);
-		G2L["1b"]["BorderSizePixel"] = 0;
-		G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["1b"]["TextSize"] = 17;
-		G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-		G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-		G2L["1b"]["Size"] = UDim2.new(0, 21, 0, 31);
-		G2L["1b"]["BackgroundTransparency"] = 1;
-		G2L["1b"]["Name"] = [[Close]];
-		G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		G2L["1b"]["Text"] = [[X]];
-		G2L["1b"]["Position"] = UDim2.new(0.88177, 0, 0, 0);
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.Close.Close.Script
-		G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
-		G2L["1c"]["Name"] = [[Close.Script]];
-	
-	
-		-- StarterGui.KittyGui.Stats.Stats.ws.StatsHandlerWalkSpeed
-		local function C_6()
-			local script = G2L["6"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()
-			local box = plr.PlayerGui["KittyGui.Stats"].Stats.WalkSpeed
-	
-			-- Function to update WalkSpeed based on TextBox input
-			local function updateWalkSpeed()
-				local boxText = box.Text
-	
-				-- Check if the TextBox is not empty
-				if boxText ~= "" then
-					-- Try to convert the text to a number
-					local speed = tonumber(boxText)
-	
-					if speed then
-						-- Valid speed, apply it
-						char.Humanoid.WalkSpeed = speed
+			-- StarterGui.KittyGui.Stats.Stats.JumpPower:
+			G2L["14"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["14"]["BorderSizePixel"] = 0;
+			G2L["14"]["TextSize"] = 17;
+			G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["14"]["BackgroundTransparency"] = 1;
+			G2L["14"]["Size"] = UDim2.new(0, 200, 0, 50);
+			G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["14"]["Text"] = [[JumpPower:]];
+			G2L["14"]["Name"] = [[JumpPower:]];
+			G2L["14"]["Position"] = UDim2.new(-0.21182, 0, 0.43157, 0);
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.jp
+			G2L["15"] = Instance.new("Folder", G2L["2"]);
+			G2L["15"]["Name"] = [[jp]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.jp.StatsHandlerJumpPower
+			G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+			G2L["16"]["Name"] = [[StatsHandlerJumpPower]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentHealth
+			G2L["17"] = Instance.new("TextBox", G2L["2"]);
+			G2L["17"]["Name"] = [[CurrentHealth]];
+			G2L["17"]["BorderSizePixel"] = 0;
+			G2L["17"]["TextEditable"] = false;
+			G2L["17"]["TextSize"] = 14;
+			G2L["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["17"]["BackgroundColor3"] = Color3.fromRGB(169, 178, 159);
+			G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["17"]["Size"] = UDim2.new(0, 80, 0, 25);
+			G2L["17"]["Position"] = UDim2.new(0.59113, 0, 0.63686, 0);
+			G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["17"]["Text"] = [[]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.UICorner
+			G2L["18"] = Instance.new("UICorner", G2L["17"]);
+	
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.Health
+			G2L["19"] = Instance.new("LocalScript", G2L["17"]);
+			G2L["19"]["Name"] = [[Health]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.Health:
+			G2L["1a"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["1a"]["BorderSizePixel"] = 0;
+			G2L["1a"]["TextSize"] = 17;
+			G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["1a"]["BackgroundTransparency"] = 1;
+			G2L["1a"]["Size"] = UDim2.new(0, 200, 0, 50);
+			G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["1a"]["Text"] = [[Health:]];
+			G2L["1a"]["Name"] = [[Health:]];
+			G2L["1a"]["Position"] = UDim2.new(-0.21182, 0, 0.59924, 0);
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.Close
+			G2L["1b"] = Instance.new("TextButton", G2L["2"]);
+			G2L["1b"]["BorderSizePixel"] = 0;
+			G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["1b"]["TextSize"] = 17;
+			G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["1b"]["Size"] = UDim2.new(0, 21, 0, 31);
+			G2L["1b"]["BackgroundTransparency"] = 1;
+			G2L["1b"]["Name"] = [[Close]];
+			G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["1b"]["Text"] = [[X]];
+			G2L["1b"]["Position"] = UDim2.new(0.88177, 0, 0, 0);
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.Close.Close.Script
+			G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+			G2L["1c"]["Name"] = [[Close.Script]];
+	
+	
+			-- StarterGui.KittyGui.Stats.Stats.ws.StatsHandlerWalkSpeed
+			local function C_6()
+				local script = G2L["6"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()
+				local box = plr.PlayerGui["KittyGui.Stats"].Stats.WalkSpeed
+	
+				-- Function to update WalkSpeed based on TextBox input
+				local function updateWalkSpeed()
+					local boxText = box.Text
+	
+					-- Check if the TextBox is not empty
+					if boxText ~= "" then
+						-- Try to convert the text to a number
+						local speed = tonumber(boxText)
+	
+						if speed then
+							-- Valid speed, apply it
+							char.Humanoid.WalkSpeed = speed
+						else
+							-- Invalid input, show a warning
+							warn("Invalid input! Please enter a valid number.")
+						end
 					else
-						-- Invalid input, show a warning
-						warn("Invalid input! Please enter a valid number.")
+						-- Handle case where the TextBox is empty
+						warn("TextBox is empty! Please enter a value.")
 					end
-				else
-					-- Handle case where the TextBox is empty
-					warn("TextBox is empty! Please enter a value.")
 				end
-			end
 	
-			-- Trigger the function when the TextBox text is changed
-			box.FocusLost:Connect(updateWalkSpeed)
+				-- Trigger the function when the TextBox text is changed
+				box.FocusLost:Connect(updateWalkSpeed)
 	
-		end;
-		task.spawn(C_6);
-		-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.JumpHeight
-		local function C_d()
-			local script = G2L["d"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()
+			end;
+			task.spawn(C_6);
+			-- StarterGui.KittyGui.Stats.Stats.CurrentJumpPower.JumpHeight
+			local function C_d()
+				local script = G2L["d"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()
 	
-			while true do
-				wait(0.00001)
-				script.Parent.Text = char.Humanoid.JumpHeight
-			end
+				while true do
+					wait(0.00001)
+					script.Parent.Text = char.Humanoid.JumpHeight
+				end
 	
-		end;
-		task.spawn(C_d);
-		-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.WalkSpeedCurrent
-		local function C_10()
-			local script = G2L["10"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()
+			end;
+			task.spawn(C_d);
+			-- StarterGui.KittyGui.Stats.Stats.WalkSpeedCurrent.WalkSpeedCurrent
+			local function C_10()
+				local script = G2L["10"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()
 	
-			while true do
-				wait(0.00001)
-				script.Parent.Text = char.Humanoid.WalkSpeed
-			end
+				while true do
+					wait(0.00001)
+					script.Parent.Text = char.Humanoid.WalkSpeed
+				end
 	
-		end;
-		task.spawn(C_10);
-		-- StarterGui.KittyGui.Stats.Stats.jp.StatsHandlerJumpPower
-		local function C_16()
-			local script = G2L["16"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()
-			local box = plr.PlayerGui["KittyGui.Stats"].Stats.JumpPower
+			end;
+			task.spawn(C_10);
+			-- StarterGui.KittyGui.Stats.Stats.jp.StatsHandlerJumpPower
+			local function C_16()
+				local script = G2L["16"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()
+				local box = plr.PlayerGui["KittyGui.Stats"].Stats.JumpPower
 	
-			-- Function to update WalkSpeed based on TextBox input
-			local function updateJumpPower()
-				local boxText = box.Text
+				-- Function to update WalkSpeed based on TextBox input
+				local function updateJumpPower()
+					local boxText = box.Text
 	
-				-- Check if the TextBox is not empty
-				if boxText ~= "" then
-					-- Try to convert the text to a number
-					local jmppwr = tonumber(boxText)
+					-- Check if the TextBox is not empty
+					if boxText ~= "" then
+						-- Try to convert the text to a number
+						local jmppwr = tonumber(boxText)
 	
-					if jmppwr then
-						-- Valid speed, apply it
-						char.Humanoid.JumpHeight = jmppwr
+						if jmppwr then
+							-- Valid speed, apply it
+							char.Humanoid.JumpPower = jmppwr
+						else
+							-- Invalid input, show a warning
+							warn("Invalid input! Please enter a valid number.")
+						end
 					else
-						-- Invalid input, show a warning
-						warn("Invalid input! Please enter a valid number.")
-					end
-				else
-					-- Handle case where the TextBox is empty
-					warn("TextBox is empty! Please enter a value.")
-				end
-			end
-	
-			-- Trigger the function when the TextBox text is changed
-			box.FocusLost:Connect(updateJumpPower)
-	
-		end;
-		task.spawn(C_16);
-		-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.Health
-		local function C_19()
-			local script = G2L["19"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()
-	
-			while true do
-				wait(0.00001)
-				script.Parent.Text = char.Humanoid.Health
-			end
-	
-		end;
-		task.spawn(C_19);
-		-- StarterGui.KittyGui.Stats.Stats.Close.Close.Script
-		local function C_1c()
-			local script = G2L["1c"];
-			local plr = game.Players.LocalPlayer
-			local char = plr.Character or plr.CharacterAdded:Wait()	
-	
-			plr.PlayerGui["KittyGui.Stats"].Stats.Close.Activated:Connect(function()
-				for i, Stats in pairs(plr.PlayerGui:GetDescendants()) do
-					if Stats:IsA("ScreenGui") and Stats.Name == "KittyGui.Stats" then
-						Stats:Destroy()
+						-- Handle case where the TextBox is empty
+						warn("TextBox is empty! Please enter a value.")
 					end
 				end
-			end)
 	
-		end;
-		task.spawn(C_1c);
+				-- Trigger the function when the TextBox text is changed
+				box.FocusLost:Connect(updateJumpPower)
+	
+			end;
+			task.spawn(C_16);
+			-- StarterGui.KittyGui.Stats.Stats.CurrentHealth.Health
+			local function C_19()
+				local script = G2L["19"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()
+	
+				while true do
+					wait(0.00001)
+					script.Parent.Text = char.Humanoid.Health
+				end
+	
+			end;
+			task.spawn(C_19);
+			-- StarterGui.KittyGui.Stats.Stats.Close.Close.Script
+			local function C_1c()
+				local script = G2L["1c"];
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character or plr.CharacterAdded:Wait()	
+	
+				plr.PlayerGui["KittyGui.Stats"].Stats.Close.Activated:Connect(function()
+					for i, Stats in pairs(plr.PlayerGui:GetDescendants()) do
+						if Stats:IsA("ScreenGui") and Stats.Name == "KittyGui.Stats" then
+							Stats:Destroy()
+						end
+					end
+				end)
+	
+			end;
+			task.spawn(C_1c);
 	
 			return G2L["1"], require;
-		else
-			print("stats is alr there lil bro")
 		end
 	end)
 end;
