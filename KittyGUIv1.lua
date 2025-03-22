@@ -695,7 +695,7 @@ local script = G2L["16"];
 	
 			while true do
 				wait(0.00001)
-				script.Parent.Text = char.Humanoid.JumpHeight
+				script.Parent.Text = char.Humanoid.JumpPower
 			end
 	
 		end;
